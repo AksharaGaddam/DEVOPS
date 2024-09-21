@@ -1,0 +1,20 @@
+#Ignore System files
+NTUSER.*
+AppData/
+Downloads/
+Favorites/
+Links/
+OneDrive/
+Saved Games/
+Searches/
+Videos/
+
+# Ignore Python and Jupyter related files
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.vscode/
+.anaconda/
+.conda/
+.jupyter/
+.cache/
