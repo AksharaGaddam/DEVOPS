@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <style>
+      body{
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: rgb(202, 178, 146);
+        
+      } 
+    </style>
+    <body>
+
+        <div class="container">
+            <h2>Event Registration Form</h2>
+            <form action="submit.html" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+        
+                <label for="event">Select Event:</label>
+                <select id="event" name="event" required>
+                    <option value="">--Please choose an event--</option>
+                    <option value="Logo">Logo Event</option>
+                    <option value="Technical">Technical Event</option>
+                    <option value="Co-cirricular">Co-cirricular</option>
+                    <option value="Poster">Poster</option>
+                    <option value="Pot Making">Pot Making</option>
+                    <option value="Kites Flying">Kites Flying</option>
+                </select>
+        
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        
+        </body>
+</html>
