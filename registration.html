@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Registration Form</title>
+    <title>Registration Form</title>
     <style>
+        /* Common styles for both versions */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #0d1117;
@@ -78,20 +79,20 @@
 
 <div class="container">
     <div class="form-section">
-        <h2>Workshop Registration Form</h2>
-        <form action="thankyou.html" method="post">
-            <label>Full Name:</label>
-            <input type="text" name="fullName" placeholder="Enter your full name" required>
+        <h2>Registration Form</h2>
+        <form id="workshopForm" action="submit.html" method="post">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
 
-            <label>Email Address:</label>
-            <input type="email" name="email" placeholder="Enter your email address" required>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
 
-            <label>Phone Number:</label>
-            <input type="tel" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
 
-            <label>Select Workshop:</label>
-            <select name="workshop" required>
-                <option value="">--Please choose a workshop--</option>
+            <label for="workshop">Select Workshop/Webinar:</label>
+            <select id="workshop" name="workshop" required>
+                <option value="">--Please choose an option--</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Data Science">Data Science</option>
                 <option value="Machine Learning">Machine Learning</option>
@@ -99,8 +100,17 @@
                 <option value="Cloud Computing">Cloud Computing</option>
             </select>
 
-            <label>Additional Comments:</label>
-            <textarea name="comments" rows="4" placeholder="Enter any additional information..."></textarea>
+            <div id="webinarSheetContainer">
+                <!-- Conditional content for selected webinars/workshops -->
+                <div id="webDevSheet" class="webinar-sheet">
+                    <h3>Web Development Information</h3>
+                    <!-- Additional form fields for Web Development -->
+                </div>
+                <!-- Repeat for other options as needed -->
+            </div>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional information..."></textarea>
 
             <input type="submit" value="Register">
         </form>
@@ -108,5 +118,6 @@
     <div class="image-section"></div>
 </div>
 
+<!-- Include your JS script logic -->
 </body>
 </html>
